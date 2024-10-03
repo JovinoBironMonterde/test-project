@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    font-family: "Roboto", sans-serif;
+}
+#Hero-Section{
+    width: 100%;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+/* navigation menu */
+nav{
+    max-width: 80%;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 99;
+}
+.Content{
+    width: 100%;
+    max-width: 80%;
+}
+
+/* Navigation for mobile */
+ #mobile-menu{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    left: 0;
+    z-index: 99999 !important;
+ }
+ /* Showing the menu of mobile and tablet scrree size */
+.openMenu{
+    position: fixed;
+    top: 0 ;
+    transition: all .4s ease-out;
+}
+ /* Closing the menu of mobile and tablet scrree size */
+.closeMenu{
+    position: fixed;
+    top: -100%;
+    transition: all .4s ease-out;
+}
+
+ .imggroup {
+    position: relative;
+    width: auto;
+    height: auto;
+    width: 400px;
+    height: 100%;
+    max-height: 600px;
+}
+
+/* font size */
+.text-8xl{
+    font-size: 80px;
+}
+.leading-negative{
+    line-height: -2 !important;
+}
+.lg-text {
+    font-size: 71.2px;
+}
+.text-review{
+    font-size: 14px !important;
+}
+.text-black.text-4xl{
+    font-size: 25px;
+}
+
+
+/* style for icon */
+.fa-solid{
+    font-size: 100px;
+    color: rgba(9, 9, 175, 0.664);
+    background-color: #fff;
+    border-radius: 50%;
+}
+.fa-star{
+    font-size: 14px;
+    color: rgb(22, 199, 102);
+}
+.fa-star-sharp{
+    font-size: 20px;
+    color: rgb(22, 199, 102);
+}
+
+/* style for hover effect  */
+.overly {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(2, 2, 2, 0.473); 
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    opacity: 0; 
+    color: #fff;
+}
+.overlyIcon {
+    position: absolute;
+    top: 50%; /* Position it halfway down the parent */
+    left: 50%; /* Position it halfway across the parent */
+    transform: translate(-50%, -50%); /* Move it back by half its width and height to center it */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    font-size: 3rem; /* Adjust the icon size as needed */
+}
+
+
+.imggroup:hover .overlyIcon, .imggroup:hover .overlyIcon .fa-solid{
+    color: rgba(18, 18, 255, 0.89);
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    cursor: pointer;
+}
+.imggroup:hover .overly {
+    background-color: rgba(1, 1, 37, 0.514);
+    opacity: 1;
+    cursor: pointer;
+}
+
+
+/* This is Carousel to make slide the review Box */
+.carousel-item {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: white;
+    font-size: 2em;
+    border-radius: 10px;
+    z-index: 9;
+}
+.owl-dots{
+    display: none !important;
+}
+
+
+/* Modal Section */
+#myModal{
+    z-index: 99;
+}
+.modal-content{
+    width: 700px;
+    z-index: 99;
+}
+.backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(10, 10, 10, 0.199); 
+    backdrop-filter: blur(10px); 
+    z-index: 10; 
+}
+.modal-content {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+/* This is for frame for video from youtube */
+.framevideo{
+    width: 100% !important;
+    max-width: 760px !important;
+    height: 415px;
+}
+/* End Modal Section */
+
+/* for laptop size */
+@media (max-width: 1200px) {
+    .lg-text {
+        font-size: 52px;
+        }
+ }
+
+ /* for tablet size */
+ @media (max-width: 992px) {
+    nav{
+        max-width: 96%;
+        border-radius: 50%;
+    }
+    .Content{
+        width: 100%;
+        max-width: 100%;
+    }
+    .lg-text {
+        font-size: 50px;
+        }
+    .framevideo{
+        width: 700px;
+        height: 415px;
+    }
+ }
+
+
+

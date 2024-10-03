@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon2.png" type="image/x-icon">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/Style.css">
+        <title>Document</title>
+</head>
+<body>
+    <section class="Hero w-full w-full max-w-80 " id="Hero-Section">
+        <nav class="w-full  sticky mb-8 mx-auto flex justify-between items-center p-4 rounded-full px-8 mt-10 px:mb-0">
+            <!-- Logo or brand -->
+            <div class="text-2xl font-bold">
+                <img src="./img/logo2.png" width="120px" alt="" srcset="">
+            </div>
+
+            <!-- Menu items for larger screens -->
+            <div class="menu hidden md:flex space-x-8">
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="hover:text-blue-500">Features</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Solutions</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Resources</a></li>
+                    <li><a href="#" class="hover:text-blue-500">Pricing</a></li>
+                </ul>
+            </div>
+
+            <!-- Buttons (hidden on md and larger screens) -->
+            <div class="space-x-4 hidden md:flex">
+                <button class="px-4 py-2 bg-transparent border border-blue-500 text-blue-500 rounded-full hover:bg-blue-500 hover:text-white transition">Log in</button>
+                <button class="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition">Get Started</button>
+            </div>
+
+            <!-- Hamburger button for mobile -->
+            <div class="md:hidden">
+                <button id="Open-menu-button" onclick="toggleMenu()">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile menu for small screens -->
+            <div class="MobileSize-menu closeMenu" id="mobile-menu">
+                <div class="menu space-y-4 p-3 mb-8 border-t-[3px]">
+                    <div class="mb-20 flex justify-end">
+                        <button id="close-menu-button"  onclick="toggleMenu()">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="block space-y-4 text-center">
+                        <li class="hover:bg-blue-500 p-2 text-md rounded" onclick="toggleMenu()"><a href="#">Features</a></li>
+                        <li class="hover:bg-blue-500 p-2 text-md rounded" onclick="toggleMenu()"><a href="#" class="hover:text-blue-500">Solutions</a></li>
+                        <li class="hover:bg-blue-500 p-2 text-md rounded" onclick="toggleMenu()"><a href="#" class="hover:text-blue-500">Resources</a></li>
+                        <li class="hover:bg-blue-500 p-2 text-md rounded" onclick="toggleMenu()"><a href="#" class="hover:text-blue-500">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="space-x-4 text-center">
+                    <button class="px-4 py-2 bg-transparent border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition">Log in</button>
+                    <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">Get Started</button>
+                </div>
+            </div>
+        </nav>
+       
+        <!-- Main content -->
+        <div class="Content mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 p-4">
+                <!-- Left Column -->
+                <div class="col-span-1 md:col-span-6 py-4">
+                    <h5 class="text-blue-600 font-bold mb-3 tracking-widest ">BEST CAPTION HERE</h5>
+                    <h1 class="font-bold text-4xl md:text-8xl lg-text mb-4 leading-none">
+                        Build online business from home.
+                    </h1>
+                                        
+                    <h5 class="font-bold text-1xl md:text-1xl mb-4">Amet minim mollit non deserunt ullamco est sit aliqua dor do amet sint.
+                        Velit officia consequat duis enim velit mollit. Exercitation venuiam consequat.
+                    </h5>
+                    <div class="flex w-full mb-12">
+                        <button class="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition mr-3">Get Started</button>
+                        <button class="open-modal px-4 py-2 bg-white-100 border  font-bold text-black-500 rounded-full hover:bg-blue-500 hover:text-white transition">Watch video</button>
+                    </div>
+
+                    <!-- Review Box slider -->
+                    <div class="owl-carousel">
+                        <div class="carousel-item bg-white-100 shadow mb-3">
+                            <div class="p-5">
+                                <div class="flex mb-2">
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                </div>
+                                <p class="text-gray-500 text-review mb-3">(45k Reviews)</p>
+                    
+                                <div class="flex items-center mb-2">    
+                                    <i class="fa-solid fa-star fa-star-sharp mr-2"></i>
+                                    <p class="font-bold text-black text-4xl">Trustoilot</p>
+                                </div>
+                                <p class="text-xs leading-none font-medium text-black">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime a cupiditate!"</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item bg-white-100 shadow mb-3">
+                            <div class="p-5">
+                                <div class="flex mb-2">
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                </div>
+                                <p class="text-gray-500 text-review mb-3">(45k Reviews)</p>
+                    
+                                <div class="flex items-center mb-2">    
+                                    <i class="fa-solid fa-star fa-star-sharp mr-2"></i>
+                                    <p class="font-bold text-black text-4xl">Trustoilot</p>
+                                </div>
+                                <p class="text-xs leading-none font-medium text-black">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime a cupiditate!"</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item bg-white-100 shadow mb-3">
+                            <div class="p-5">
+                                <div class="flex mb-2">
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                    <i class="fa-solid fa-star mr-1"></i>
+                                </div>
+                                <p class="text-gray-500 text-review mb-3">(45k Reviews)</p>
+                    
+                                <div class="flex items-center mb-2">    
+                                    <i class="fa-solid fa-star fa-star-sharp mr-2"></i>
+                                    <p class="font-bold text-black text-4xl">Trustoilot</p>
+                                </div>
+                                <p class="text-xs leading-none font-medium text-black">"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime a cupiditate!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column with image -->
+                <div class="col-span-1 md:col-span-6 flex justify-center rounded-lg overflow-hidden ">
+                    <div class="relative imggroup open-modal">
+                        <img src="./img/image2.webp" alt="" class="w-full h-auto rounded">
+                        <div class="overly text-blue-600 "></div>
+                        <div class="overlyIcon"><i class="fa-solid fa-circle-play"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Section -->
+        <div id="myModal" class="modal hidden fixed inset-0 flex justify-center items-center">
+            <div class="backdrop"></div>
+            <div class="modal-content">
+                <span class="close cursor-pointer text-gray-500 float-right text-2xl">&times;</span>
+                <h2 class="text-lg font-bold">Modal Title</h2>
+                <p>This is the content of the modal.</p>
+                <!-- YouTube iframe -->
+                <iframe class="framevideo" src="https://www.youtube.com/embed/wDchsz8nmbo?si=SLy3RofkISPrjQg1&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <script src="./js/script.js"></script>
+</body>
+</html>
